@@ -11,10 +11,12 @@
   body,h1,h2,h3,h4,h5,h6 {
     font-family: "Raleway", sans-serif;
   }
+
   body, html {
     height: 100%;
     line-height: 1.8;
   }
+
   .bgimg-1 {
     background-position: center;
     background-size: cover;
@@ -22,49 +24,60 @@
     height: 90vh;
     position: relative;
   }
+
   .centered-text {
     text-align: center;
     margin-bottom: 20px;
   }
+
   .centered-text span {
     font-size: 24px;
     font-family: 'GoudyTrajan-Regular', sans-serif;
     color: #000;
   }
+
   .true-blue {
     font-family: 'Roundhand-Bold', sans-serif;
     color: #0074cc;
   }
+
   .logo-container {
     text-align: center;
     margin-top: 10px;
   }
+
   @font-face {
     font-family: 'GoudyTrajan-Regular';
     src: url('GoudyTrajan-Regular.otf') format('opentype');
   }
+
   @font-face {
     font-family: 'Roundhand-Bold';
     src: url('Roundhand-Bold.ttf') format('truetype');
   }
+
   .w3-bar .w3-button {
     color: #0074cc !important;
   }
+
   footer {
     background-color: #0074cc !important;
     color: rgb(18, 72, 180) !important;
     text-align: center;
     padding: 10px 0;
   }
+
   .slideshow-container {
     position: relative;
     margin: auto;
     height: 60vh;
   }
+
   .mySlides {
     display: none;
     height: 100%;
   }
+
   .mySlides img {
     width: 100%;
     height: auto;
@@ -84,19 +97,24 @@
   text-align: center; /* Ensure text is centered */
   filter: none;
 }
+
 @media (max-width: 600px) {
   .bgimg-1 {
     height: 40vh; /* Adjust height for smaller screens if needed */
   }
+
   .centered-text span {
     font-size: 18px; /* Adjust font size for smaller screens */
   }
 }
+
+
   .shadow-box {
     box-shadow: 0 -8px 16px rgba(2, 0, 0, 0.0);
     padding: 16px;
     background-color: #ffffff;
   }
+
   .centered-title .w3-bottombar {
     display: inline-block;
     margin: 0 auto;
@@ -105,16 +123,20 @@
   text-align: center;
   box-shadow: 0px 8px 16px rgba(2, 0, 0, .0); /* Drop shadow on top */
 }
+
 ul li a {
     text-decoration: none; /* Removes underline */
     color: inherit; /* Inherits color from parent */
 }
+
 ul {
     text-align: left; /* Aligns the list items to the left */
+
 }
 .w3-left-align {
   text-align: left !important;
 }
+
 .blue-box-button {
   border: 2px solid #0074cc; /* Blue border */
   padding: 8px 16px; /* Padding for the button */
@@ -123,23 +145,28 @@ ul {
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
+
 .blue-box-button:hover {
   background-color: #0074cc; /* Blue background on hover */
   color: white; /* White text on hover */
 }
+
 .logo-image {
   max-height: 60px; /* Adjust the max height as needed */
 }
+
 /* Remove conflicting styles */
 .centered-title {
   box-shadow: none; /* Remove box-shadow */
 }
+
 /* Adjust alignment of menu options */
 .w3-right.w3-hide-small {
   display: flex;
   justify-content: flex-end; /* Align to the right */
   align-items: flex-end; /* Align to the bottom */
 }
+
 /* Add margin to the logo-container */
 .logo-container {
   margin-bottom: 20px; /* Add margin to separate from menu options */
@@ -148,23 +175,15 @@ ul {
 .w3-card img {
   filter: none !important;
 }
+
 .padding-reduced {
     padding: 64px 8px; /* Adjust these values as needed */
 }
+
 #welcome-heading,
   #services-heading {
     font-size: 32px;
   }
-  /* Add this media query to hide the menu on small screens */
-@media screen and (max-width: 600px) {
-  .w3-right.w3-hide-small {
-    display: none;
-  }
-  /* Hide the sidebar on small screens */
-  #mySidebar {
-    display: none !important;
-  }
-}
 </style>
 </head>
 <body>
@@ -174,12 +193,25 @@ ul {
     <a href="index.html" class="w3-bar-item w3-button w3-wide">
       <img src="TBLogo.png" alt="LOGO" class="logo-image">
     </a>    
+    <div class="w3-right w3-hide-small" style="flex: 1; display: flex; justify-content: center; align-items: flex-end;">
+      <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i>HOME</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-users" aria-hidden="true"></i> TEAM</a>
+      <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-handshake-o" aria-hidden="true"></i> SERVICES</a>
+      <a href="#projects" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PROPERTIES</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    </a>
+  </div>
+</div>
+
+
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-center">
     <div class="slideshow-container">
       <div class="mySlides">
         <img src="TBHMain.JPG" alt="Image 1">
 </header>
+
 <div class="w3-container w3-light-grey shadow-box" style="padding:5px 10px !important;" id="services">
 <div class="w3-container w3-light-grey shadow-box" style="padding:50px 16px;" id="services">
   <div class="w3-padding-16"><span class="w3-xlarge w3-border-blue w3-bottombar">Our Services</span></div>
@@ -195,6 +227,7 @@ ul {
         <li><a href="Consulting.html">Consulting Services</a></li>
         <li><a href="Receive.html">Receivership Services</a></li>
     </ul>   
+
       <p><a href="#projects" class="w3-button w3-black centered-title"><i class="fa fa-th"> </i> View Our Properties & Clients</a></p>
     </div>
     <div class="w3-col m6">
@@ -202,6 +235,8 @@ ul {
     </div>
   </div>
 </div>
+
+
 <div class="w3-container" style="padding:20px 16px" id="team">
   <div class="w3-padding-16 centered-title"><span class="w3-xlarge w3-border-blue w3-bottombar">About Us</span></div>
   <p style="text-align:center;">Our mission is to provide exceptional hospitality services with integrity and innovation, focusing on achieving excellence for our owners, investors, and clients. Through hands-on management, we aim to delight guests, empower employees, and maximize investment value.</p>
@@ -210,6 +245,7 @@ ul {
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
 <img src="DKalik.jpeg" style="width:100%; filter: none;">
+
         <div class="w3-container">
           <h3>David Kalik</h3>
           <p class="w3-opacity">CEO & Founder</p>
@@ -259,6 +295,7 @@ ul {
   <div class="w3-padding-16 centered-title"><span class="w3-xlarge w3-border-blue w3-bottombar"> Our Properties and Consulting Clients</span></div>
   <p class="w3-center w3-large">Located across the Carolinas</p>
 </div>
+
 <div class="w3-row-padding">
   <div class="w3-col l3 m6 w3-margin-bottom">
     <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/summerville/chssm/hoteldetail">
@@ -327,6 +364,7 @@ ul {
     </a>
   </div>
 </div>
+
 <div class="w3-padding-16 centered-title" id="projects">
   <div class="w3-padding-16 centered-title"><span class="w3-xlarge w3-border-blue w3-bottombar"> Previous Properties and Consulting Clients</span></div>
 </div>
@@ -376,6 +414,7 @@ ul {
   </div>
   <div class="w3-col l2 m0">&nbsp;</div>
 </div>
+
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
   <div class="w3-row">
     <div class="w3-col m5">
@@ -421,6 +460,9 @@ ul {
     </div>
   </div>
 </div>
+
+
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off" style=" width: 1000;">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -431,6 +473,7 @@ ul {
   </div>
   <p>&copy; True Blue Hospitality</a></p>
 </footer>
+
 <script>
 // Modal Image Gallery
 function onClick(element) {
@@ -439,9 +482,27 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+}
+
 // Function to handle scroll event
 function handleScroll() {
   const slideElements = document.querySelectorAll('.slide-in');
+
   slideElements.forEach(element => {
     const rect = element.getBoundingClientRect();
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -452,10 +513,15 @@ function handleScroll() {
     } else {
       element.classList.remove('visible');
     }
+  });
+}
+
 // Attach scroll event listener to the window
 window.addEventListener('scroll', handleScroll);
+
 // Initially trigger the handleScroll function to check if elements are in the viewport on page load
 window.addEventListener('load', handleScroll);
-    </script>
+
+</script>
 </body>
 </html>
