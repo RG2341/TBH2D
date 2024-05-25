@@ -475,7 +475,6 @@ ul {
   </div>
   <p>&copy; True Blue Hospitality</a></p>
 </footer>
-
 <script>
 // Modal Image Gallery
 function onClick(element) {
@@ -486,19 +485,18 @@ function onClick(element) {
 }
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
 function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
+  var x = document.getElementById("mySidebar");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
   } else {
-    mySidebar.style.display = 'block';
+    x.className = x.className.replace(" w3-show", "");
   }
 }
 
 // Close the sidebar with the close button
 function w3_close() {
-  mySidebar.style.display = "none";
+  document.getElementById("mySidebar").style.display = "none";
 }
 
 // Function to handle scroll event
@@ -523,7 +521,6 @@ window.addEventListener('scroll', handleScroll);
 
 // Initially trigger the handleScroll function to check if elements are in the viewport on page load
 window.addEventListener('load', handleScroll);
-
-</script>
+    </script>
 </body>
 </html>
