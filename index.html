@@ -168,19 +168,6 @@ ul {
 </style>
 </head>
 <body>
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button w3-wide">
-      <img src="TBLogo.png" alt="LOGO" class="logo-image">
-    </a>    
-    <div class="w3-right w3-hide-small" style="flex: 1; display: flex; justify-content: center; align-items: flex-end;">
-      <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i>HOME</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-users" aria-hidden="true"></i> TEAM</a>
-      <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-handshake-o" aria-hidden="true"></i> SERVICES</a>
-      <a href="#projects" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PROPERTIES</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>
 
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-center">
@@ -447,12 +434,23 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
-
 // Function to handle scroll event
 function handleScroll() {
   const slideElements = document.querySelectorAll('.slide-in');
-
+  slideElements.forEach(element => {
+    const rect = element.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    const isInView = rect.top >= 0 && rect.bottom <= viewportHeight;
+    
+    if (isInView) {
+      element.classList.add('visible');
+    } else {
+      element.classList.remove('visible');
+    }
+// Attach scroll event listener to the window
+window.addEventListener('scroll', handleScroll);
+// Initially trigger the handleScroll function to check if elements are in the viewport on page load
+window.addEventListener('load', handleScroll);
     </script>
 </body>
 </html>
