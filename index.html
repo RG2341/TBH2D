@@ -181,25 +181,6 @@ ul {
       <a href="#projects" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PROPERTIES</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
- 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="index.html" class="w3-bar-item w3-button w3-wide">
-      <img src="TBLogo.png" alt="LOGO" style="max-height: 40px;">
-    </a>    
-    <div class="w3-right w3-hide-small">
-      <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i>HOME</a>
-      <a href="index.html#team" class="w3-bar-item w3-button"><i class="fa fa-users" aria-hidden="true"></i> TEAM</a>
-      <a href="index.html#services" class="w3-bar-item w3-button"><i class="fa fa-handshake-o" aria-hidden="true"></i> SERVICES</a>
-      <a href="index.html#projects" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PROPERTIES</a>
-      <a href="index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-  </div>  
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
 
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-center">
@@ -467,43 +448,10 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
 
 // Function to handle scroll event
 function handleScroll() {
   const slideElements = document.querySelectorAll('.slide-in');
-
-  slideElements.forEach(element => {
-    const rect = element.getBoundingClientRect();
-    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-    const isInView = rect.top >= 0 && rect.bottom <= viewportHeight;
-    
-    if (isInView) {
-      element.classList.add('visible');
-    } else {
-      element.classList.remove('visible');
-    }
-  });
-}
-
-// Attach scroll event listener to the window
-window.addEventListener('scroll', handleScroll);
-
-// Initially trigger the handleScroll function to check if elements are in the viewport on page load
-window.addEventListener('load', handleScroll);
 
     </script>
 </body>
