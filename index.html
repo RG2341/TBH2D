@@ -513,6 +513,21 @@ function handleScroll() {
     } else {
       element.classList.remove('visible');
     }
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+function w3_open() {
+  // Check if the current page is the home page
+  if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+    return; // If it is, do nothing and return from the function
+  }
+
+  var x = document.getElementById("mySidebar");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
   });
 }
 
